@@ -1,0 +1,74 @@
+:root {
+  --col-html: #f66b3a;
+  --col-css: #16a1dc;
+  --col-js: #ffde24;
+  --col-php: #381fb9;
+  --col-wp: #21759b;
+  --col-react: #1fb92b;
+  --col-sm: #b91f95;
+}
+
+.post-tag {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.post-tag::before {
+  content: "#";
+}
+
+.post-tag::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.5rem;
+  bottom: 0.125rem;
+  left: 0;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.tag-html {
+  color: var(--col-html);
+}
+.tag-css {
+  color: var(--col-css);
+}
+.tag-js {
+  color: var(--col-js);
+}
+.tag-php {
+  color: var(--col-php);
+}
+.tag-react {
+  color: var(--col-react);
+}
+.tag-sm {
+  color: var(--col-sm);
+}
+.tag-wp {
+  color: var(--col-wp);
+}
+
+.tag-html::after {
+  background-color: var(--col-html);
+}
+.tag-css::after {
+  background-color: var(--col-css);
+}
+.tag-js::after {
+  background-color: var(--col-js);
+}
+.tag-php::after {
+  background-color: var(--col-php);
+}
+.tag-react::after {
+  background-color: var(--col-react);
+}
+.tag-sm::after {
+  background-color: var(--col-sm);
+}
+.tag-wp::after {
+  background-color: var(--col-wp);
+}

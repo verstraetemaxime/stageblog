@@ -1,0 +1,34 @@
+.header {
+  background-color: var(--color-yellow);
+  margin-bottom: 1rem;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.header__title {
+  margin: 0;
+  display: inline-block;
+  color: var(--color-black);
+}
+
+.header__img {
+  margin-left: 1.5rem;
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.5rem solid rgba(44, 28, 10, 0.1);
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .header__img {
+    display: inline-block;
+  }
+}

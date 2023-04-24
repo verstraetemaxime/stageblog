@@ -1,0 +1,42 @@
+.detail__featuredimg {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.detail img {
+  border-radius: 0.75rem;
+}
+
+.detail__title {
+  margin-top: 0.75rem;
+}
+
+.detail figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.detail figure img {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media only screen and (min-width: 992px) {
+  .detail figure img {
+    width: 37.5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .detail figure img {
+    width: 37.5rem;
+  }
+}
+
+.detail h3 {
+  margin: 0 0 0.25rem 0;
+}
+
+.detail p {
+  margin-top: 0;
+}

@@ -1,0 +1,63 @@
+.post-card {
+  box-shadow: 0rem 0.125rem 0.75rem 0rem rgba(0, 0, 0, 0.08);
+  border-radius: 0.375rem;
+  overflow: hidden;
+  height: 100%;
+}
+
+.post-card__title {
+  margin: 0.5rem 0 0 0;
+}
+
+.post-card__content {
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.post-card__description {
+  padding: 0.5rem 0;
+}
+
+.post-card__description p {
+  margin: 0;
+}
+
+.post-card__img {
+  width: 100%;
+  max-height: 12rem;
+  min-height: 12rem;
+  object-fit: cover;
+}
+
+.post-card__link {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.post-card__btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin: 0.75rem 0;
+}
+
+.post-card__btn {
+  text-decoration: none;
+  height: 0.125rem;
+  width: 1.25rem;
+  display: inline-block;
+  background-color: var(--color-black);
+  position: relative;
+  transform: rotate(-45deg);
+}
+
+.post-card__btn::after {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  position: absolute;
+  border-bottom: 0.125rem solid var(--color-black);
+  border-right: 0.125rem solid var(--color-black);
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
