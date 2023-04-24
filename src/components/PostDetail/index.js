@@ -1,5 +1,6 @@
 import "./style.css";
 import PostTagList from "../PostTagList";
+import Skeleton from "react-loading-skeleton";
 
 const PostDetail = ({ post, tags }) => {
   const featuredImg = post._embedded["wp:featuredmedia"]
@@ -18,8 +19,8 @@ const PostDetail = ({ post, tags }) => {
         {tags && tags.length > 0 ? (
           <PostTagList tags={tags} />
         ) : (
-          "No tags found"
-        )}{" "}
+          <Skeleton width={150} />
+        )}
         <h2
           className="detail__title"
           dangerouslySetInnerHTML={{ __html: post.title.rendered }}

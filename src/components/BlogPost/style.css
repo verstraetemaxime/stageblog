@@ -21,16 +21,27 @@
   margin: 0;
 }
 
+.post-card__img-wrapper {
+  overflow: hidden;
+}
+
 .post-card__img {
   width: 100%;
   max-height: 12rem;
   min-height: 12rem;
   object-fit: cover;
+  display: inherit;
+  transform: scale(1.04);
+  transition: transform 0.2s ease-out;
 }
 
 .post-card__link {
   text-decoration: none;
   color: var(--color-black);
+}
+
+.post-card__link:hover .post-card__img {
+  transform: scale(1);
 }
 
 .post-card__btn-wrapper {

@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import "./style.css";
 import useFetch from "../../hooks/useFetch";
 import PostTagList from "../PostTagList";
@@ -29,11 +30,8 @@ const BlogPost = ({ post }) => {
           />
         </div>
         <div className="post-card__content">
-          {tags && tags.length > 0 ? (
-            <PostTagList tags={tags} />
-          ) : (
-            "No tags found"
-          )}
+          {isPending && <Skeleton width={150} />}
+          {tags && tags.length > 0 && <PostTagList tags={tags} />}
           <h3
             className="post-card__title"
             dangerouslySetInnerHTML={{ __html: post.title.rendered }}
