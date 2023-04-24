@@ -8,7 +8,7 @@ const Detail = () => {
     data: post,
     isPending,
     error,
-  } = useFetch(`https://maxv.be/stageblog/wp-json/wp/v2/posts/${id}?_embed`);
+  } = useFetch(`https://stage.maxv.be/wp-json/wp/v2/posts/${id}?_embed`);
 
   return <>{post && <PostDetail post={post} />}</>;
 };

@@ -10,7 +10,7 @@ const PostDetail = ({ post }) => {
     isPending,
     error,
   } = useFetch(
-    `https://maxv.be/stageblog/wp-json/wp/v2/tags?include=${postTags.join()}`
+    `https://stage.maxv.be/wp-json/wp/v2/tags?include=${postTags.join()}`
   );
 
   const featuredImg = post._embedded["wp:featuredmedia"]

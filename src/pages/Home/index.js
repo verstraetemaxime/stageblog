@@ -6,7 +6,7 @@ const Home = () => {
     data: posts,
     isPending,
     error,
-  } = useFetch("https://maxv.be/stageblog/wp-json/wp/v2/posts?_embed");
+  } = useFetch("https://stage.maxv.be/wp-json/wp/v2/posts?_embed");
   console.log(posts);
   return <>{posts && <BlogList posts={posts} />}</>;
 };
