@@ -1,3 +1,15 @@
+@media only screen and (min-width: 1200px) {
+  .detail {
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .detail {
+    width: 75%;
+  }
+}
+
 .detail__featuredimg {
   width: 100%;
   margin-bottom: 0.5rem;

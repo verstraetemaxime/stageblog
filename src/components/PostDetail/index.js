@@ -1,18 +1,7 @@
 import "./style.css";
 import PostTagList from "../PostTagList";
-import useFetch from "../../hooks/useFetch";
 
-const PostDetail = ({ post }) => {
-  const postTags = post.tags.length > 0 ? post.tags : [-1];
-
-  const {
-    data: tags,
-    isPending,
-    error,
-  } = useFetch(
-    `https://stage.maxv.be/wp-json/wp/v2/tags?include=${postTags.join()}`
-  );
-
+const PostDetail = ({ post, tags }) => {
   const featuredImg = post._embedded["wp:featuredmedia"]
     ? post._embedded["wp:featuredmedia"][0].source_url
     : "";

@@ -20,35 +20,33 @@ const BlogPost = ({ post }) => {
 
   return (
     <>
-      <Link to={`posts/${post.id}`} className="post-card__link">
-        <section className="post-card">
-          <div className="post-card__img-wrapper">
-            <img
-              src={featuredImg}
-              alt={post.title.rendered}
-              className="post-card__img"
-            />
+      <section className="post-card">
+        <div className="post-card__img-wrapper">
+          <img
+            src={featuredImg}
+            alt={post.title.rendered}
+            className="post-card__img"
+          />
+        </div>
+        <div className="post-card__content">
+          {tags && tags.length > 0 ? (
+            <PostTagList tags={tags} />
+          ) : (
+            "No tags found"
+          )}
+          <h3
+            className="post-card__title"
+            dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+          ></h3>
+          <div
+            className="post-card__description"
+            dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+          ></div>
+          <div className="post-card__btn-wrapper">
+            <span to={`posts/${post.id}`} className="post-card__btn"></span>
           </div>
-          <div className="post-card__content">
-            {tags && tags.length > 0 ? (
-              <PostTagList tags={tags} />
-            ) : (
-              "No tags found"
-            )}
-            <h3
-              className="post-card__title"
-              dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-            ></h3>
-            <div
-              className="post-card__description"
-              dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-            ></div>
-            <div className="post-card__btn-wrapper">
-              <span to={`posts/${post.id}`} className="post-card__btn"></span>
-            </div>
-          </div>
-        </section>
-      </Link>
+        </div>
+      </section>
     </>
   );
 };

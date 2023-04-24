@@ -1,0 +1,11 @@
+.page-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .page-detail {
+    flex-direction: row;
+  }
+}
