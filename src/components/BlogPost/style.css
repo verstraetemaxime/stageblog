@@ -7,6 +7,13 @@
 
 .post-card__title {
   margin: 0.5rem 0 0 0;
+  display: inline;
+}
+
+.post-card__week-nr {
+  opacity: 0.5;
+  display: inline-block;
+  margin: 0.75rem 0.5rem 0 0;
 }
 
 .post-card__content {

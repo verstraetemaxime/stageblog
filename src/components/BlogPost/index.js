@@ -32,6 +32,7 @@ const BlogPost = ({ post }) => {
         <div className="post-card__content">
           {isPending && <Skeleton width={150} />}
           {tags && tags.length > 0 && <PostTagList tags={tags} />}
+          <span className="post-card__week-nr">Week #{post.meta._week}</span>
           <h3
             className="post-card__title"
             dangerouslySetInnerHTML={{ __html: post.title.rendered }}

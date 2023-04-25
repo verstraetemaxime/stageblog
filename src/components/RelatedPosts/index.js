@@ -6,13 +6,13 @@ const RelatedPosts = ({ posts, idPostDetail }) => {
   const postsWithoutDetailPost = posts.filter(
     (post) => post.id !== idPostDetail
   );
-  console.log(posts);
+
   return (
     <article className="related-posts">
       <h2>Related posts</h2>
       <div className="related-posts__wrapper">
         {posts &&
-          postsWithoutDetailPost.map((post) => (
+          postsWithoutDetailPost.slice(0, 3).map((post) => (
             <Link
               to={`../posts/${post.id}`}
               key={post.id}
